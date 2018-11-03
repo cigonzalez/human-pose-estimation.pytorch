@@ -216,7 +216,7 @@ class COCODataset(JointsDataset):
     def image_path_from_index(self, index):
         """ example: images / train2017 / 000000119993.jpg """
         im_ann = self.coco.loadImgs(index)[0]
-        file_name = im_ann['file_name']
+        file_name = im_ann['']
         if '2014' in self.image_set:
             file_name = 'COCO_%s_' % self.image_set + file_name
 
@@ -275,6 +275,7 @@ class COCODataset(JointsDataset):
     # need double check this API and classes field
     def evaluate(self, cfg, preds, output_dir, all_boxes, img_path,
                  *args, **kwargs):
+        pdb.set_trace()
         res_folder = os.path.join(output_dir, 'results')
         if not os.path.exists(res_folder):
             os.makedirs(res_folder)
