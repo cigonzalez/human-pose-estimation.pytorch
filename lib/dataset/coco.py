@@ -89,7 +89,6 @@ class COCODataset(JointsDataset):
                            [9, 10], [11, 12], [13, 14], [15, 16]]
         self.parent_ids = None
 
-        pdb.set_trace()
         self.db = self._get_db()
 
         if is_train and cfg.DATASET.SELECT_DATA:
@@ -216,7 +215,8 @@ class COCODataset(JointsDataset):
 
     def image_path_from_index(self, index):
         """ example: images / train2017 / 000000119993.jpg """
-        file_name = '%012d.jpg' % index
+        im_ann = self.coco.loadImgs(index)[0]
+        file_name = im_ann['file_name']
         if '2014' in self.image_set:
             file_name = 'COCO_%s_' % self.image_set + file_name
 
