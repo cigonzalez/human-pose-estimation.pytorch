@@ -6,7 +6,7 @@ WORKERS: 4
 PRINT_FREQ: 100
 
 DATASET:
-  DATASET: 'rsna'
+  DATASET: 'coco'
   ROOT: 'data/rsna/'
   TEST_SET: 'val'
   TRAIN_SET: 'train'
