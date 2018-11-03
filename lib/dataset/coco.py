@@ -361,6 +361,7 @@ class COCODataset(JointsDataset):
                     f.write(c)
 
     def _coco_keypoint_results_one_category_kernel(self, data_pack):
+        pdb.set_trace()
         cat_id = data_pack['cat_id']
         keypoints = data_pack['keypoints']
         cat_results = []
