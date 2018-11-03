@@ -22,6 +22,8 @@ from pycocotools.cocoeval import COCOeval
 from dataset.JointsDataset import JointsDataset
 from nms.nms import oks_nms
 
+import pdb
+
 
 logger = logging.getLogger(__name__)
 
@@ -103,6 +105,7 @@ class COCODataset(JointsDataset):
 
     def _load_image_set_index(self):
         """ image id: int """
+        pdb.set_trace()
         image_ids = self.coco.getImgIds()
         return image_ids
 
