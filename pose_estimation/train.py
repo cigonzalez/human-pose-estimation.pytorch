@@ -36,6 +36,7 @@ from utils.utils import create_logger
 
 import dataset
 import models
+import pdb
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Train keypoints network')
@@ -128,6 +129,8 @@ def main():
     # Data loading code
     normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
                                      std=[0.229, 0.224, 0.225])
+
+    pdb.set_trace()
     train_dataset = eval('dataset.'+config.DATASET.DATASET)(
         config,
         config.DATASET.ROOT,
