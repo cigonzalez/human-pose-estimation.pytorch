@@ -214,7 +214,7 @@ class COCODataset(JointsDataset):
     def image_path_from_index(self, index):
         """ example: images / train2017 / 000000119993.jpg """
         im_ann = self.coco.loadImgs(index)[0]
-        file_name = im_ann['file_name']
+        file_name = str(im_ann['id'])+'.png'
         if '2014' in self.image_set:
             file_name = 'COCO_%s_' % self.image_set + file_name
 
