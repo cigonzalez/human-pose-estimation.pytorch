@@ -89,6 +89,7 @@ class COCODataset(JointsDataset):
                            [9, 10], [11, 12], [13, 14], [15, 16]]
         self.parent_ids = None
 
+        pdb.set_trace()
         self.db = self._get_db()
 
         if is_train and cfg.DATASET.SELECT_DATA:
@@ -105,7 +106,6 @@ class COCODataset(JointsDataset):
 
     def _load_image_set_index(self):
         """ image id: int """
-        pdb.set_trace()
         image_ids = self.coco.getImgIds()
         return image_ids
 
