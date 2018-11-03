@@ -36,7 +36,6 @@ from utils.utils import create_logger
 
 import dataset
 import models
-import pdb
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Train keypoints network')
@@ -112,7 +111,7 @@ def main():
     writer_dict['writer'].add_graph(model, (dump_input, ), verbose=False)
 
     gpus = [int(i) for i in config.GPUS.split(',')]
-    pdb.set_trace()
+
     model = torch.nn.DataParallel(model, device_ids=gpus).cuda()
 
     # define loss function (criterion) and optimizer
