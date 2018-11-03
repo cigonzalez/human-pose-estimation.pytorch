@@ -22,8 +22,6 @@ from pycocotools.cocoeval import COCOeval
 from dataset.JointsDataset import JointsDataset
 from nms.nms import oks_nms
 
-import pdb
-
 
 logger = logging.getLogger(__name__)
 
@@ -275,13 +273,11 @@ class COCODataset(JointsDataset):
     # need double check this API and classes field
     def evaluate(self, cfg, preds, output_dir, all_boxes, img_path,
                  *args, **kwargs):
-        pdb.set_trace()
         res_folder = os.path.join(output_dir, 'results')
         if not os.path.exists(res_folder):
             os.makedirs(res_folder)
         res_file = os.path.join(
             res_folder, 'keypoints_%s_results.json' % self.image_set)
-        pdb.set_trace()
         # person x (keypoints)
         _kpts = []
         for idx, kpt in enumerate(preds):
@@ -361,7 +357,6 @@ class COCODataset(JointsDataset):
                     f.write(c)
 
     def _coco_keypoint_results_one_category_kernel(self, data_pack):
-        pdb.set_trace()
         cat_id = data_pack['cat_id']
         keypoints = data_pack['keypoints']
         cat_results = []
@@ -392,11 +387,9 @@ class COCODataset(JointsDataset):
         return cat_results
 
     def _do_python_keypoint_eval(self, res_file, res_folder):
-        pdb.set_trace()
         coco_dt = self.coco.loadRes(res_file)
         coco_eval = COCOeval(self.coco, coco_dt, 'keypoints')
         coco_eval.params.useSegm = None
-        pdb.set_trace()
         coco_eval.evaluate()
         coco_eval.accumulate()
         coco_eval.summarize()
