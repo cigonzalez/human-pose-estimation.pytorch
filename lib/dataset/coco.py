@@ -280,7 +280,7 @@ class COCODataset(JointsDataset):
             os.makedirs(res_folder)
         res_file = os.path.join(
             res_folder, 'keypoints_%s_results.json' % self.image_set)
-
+        pdb.set_trace()
         # person x (keypoints)
         _kpts = []
         for idx, kpt in enumerate(preds):
