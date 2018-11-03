@@ -290,7 +290,7 @@ class COCODataset(JointsDataset):
                 'scale': all_boxes[idx][2:4],
                 'area': all_boxes[idx][4],
                 'score': all_boxes[idx][5],
-                'image': int(img_path[idx][-16:-4])
+                'image': int(img_path[idx].split('/')[-1].split('.')[0])
             })
         # image x person x (keypoints)
         kpts = defaultdict(list)
