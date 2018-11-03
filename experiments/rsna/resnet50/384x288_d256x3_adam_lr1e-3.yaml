@@ -58,6 +58,8 @@ TRAIN:
   MOMENTUM: 0.9
   NESTEROV: false
 TEST:
+  BEGIN_EPOCH: 0
+  END_EPOCH: 140
   BATCH_SIZE: 45
   COCO_BBOX_FILE: 'data/rsna/hand_detection_results/rsna_val_2018.json'
   BBOX_THRE: 1.0
