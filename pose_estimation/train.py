@@ -113,7 +113,6 @@ def main():
 
     gpus = [int(i) for i in config.GPUS.split(',')]
     pdb.set_trace()
-    gpus = [2]
     model = torch.nn.DataParallel(model, device_ids=gpus).cuda()
 
     # define loss function (criterion) and optimizer
