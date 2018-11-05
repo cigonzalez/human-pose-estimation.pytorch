@@ -8,7 +8,7 @@ PRINT_FREQ: 100
 DATASET:
   DATASET: 'coco'
   ROOT: 'data/rsna/'
-  TEST_SET: 'val'
+  TEST_SET: 'test'
   TRAIN_SET: 'train'
   FLIP: true
   ROT_FACTOR: 40
