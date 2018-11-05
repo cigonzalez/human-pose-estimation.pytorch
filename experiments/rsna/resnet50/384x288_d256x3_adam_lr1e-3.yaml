@@ -8,7 +8,7 @@ PRINT_FREQ: 100
 DATASET:
   DATASET: 'coco'
   ROOT: 'data/rsna/'
-  TEST_SET: 't'
+  TEST_SET: 'train'
   TRAIN_SET: 'train'
   FLIP: true
   ROT_FACTOR: 40
@@ -59,7 +59,7 @@ TRAIN:
   NESTEROV: false
 TEST:
   BATCH_SIZE: 45
-  COCO_BBOX_FILE: 'data/rsna/hand_detection_results/rsna_test_bbox.json'
+  COCO_BBOX_FILE: 'data/rsna/hand_detection_results/rsna_train_bbox.json'
   BBOX_THRE: 1.0
   FLIP_TEST: false
   IMAGE_THRE: 0.0
