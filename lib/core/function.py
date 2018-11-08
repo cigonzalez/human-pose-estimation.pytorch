@@ -106,7 +106,7 @@ def validate(config, val_loader, val_dataset, model, criterion, output_dir,
     idx = 0
     with torch.no_grad():
         end = time.time()
-        pdb.set_trace()
+        #pdb.set_trace()
         for i, (input, target, target_weight, meta) in enumerate(val_loader):
             # compute output
             output = model(input)
@@ -179,6 +179,7 @@ def validate(config, val_loader, val_dataset, model, criterion, output_dir,
                 save_debug_images(config, input, meta, target, pred*4, output,
                                   prefix)
 
+        pdb.set_trace()
         name_values, perf_indicator = val_dataset.evaluate(
             config, all_preds, output_dir, all_boxes, image_path,
             filenames, imgnums)
