@@ -14,6 +14,7 @@ import os
 
 import numpy as np
 import torch
+import pdb
 
 from core.config import get_model_name
 from core.evaluate import accuracy
@@ -105,6 +106,7 @@ def validate(config, val_loader, val_dataset, model, criterion, output_dir,
     idx = 0
     with torch.no_grad():
         end = time.time()
+        pdb.set_trace()
         for i, (input, target, target_weight, meta) in enumerate(val_loader):
             # compute output
             output = model(input)
