@@ -9,6 +9,7 @@ from __future__ import division
 from __future__ import print_function
 
 import numpy as np
+import pdb
 
 from core.inference import get_max_preds
 
@@ -45,6 +46,7 @@ def accuracy(output, target, hm_type='gaussian', thr=0.5):
     First value to be returned is average accuracy across 'idxs',
     followed by individual accuracies
     '''
+    pdb.set_trace()
     idx = list(range(output.shape[1]))
     norm = 1.0
     if hm_type == 'gaussian':
