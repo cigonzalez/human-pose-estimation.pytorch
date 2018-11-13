@@ -15,6 +15,7 @@ from core.inference import get_max_preds
 
 
 def calc_dists(preds, target, normalize):
+    pdb.set_trace()
     preds = preds.astype(np.float32)
     target = target.astype(np.float32)
     dists = np.zeros((preds.shape[1], preds.shape[0]))
