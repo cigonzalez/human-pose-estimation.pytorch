@@ -30,7 +30,7 @@ def calc_dists(preds, target, normalize):
     return dists
 
 
-def dist_acc(dists, thr=0.01):
+def dist_acc(dists, thr=0.00000000000000000001):
     ''' Return percentage below threshold while ignoring values with a -1 '''
     dist_cal = np.not_equal(dists, -1)
     num_dist_cal = dist_cal.sum()
