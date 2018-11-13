@@ -50,6 +50,7 @@ def accuracy(output, target, hm_type='gaussian', thr=0.5):
     #pdb.set_trace()
     idx = list(range(output.shape[1]))
     norm = 1.0
+    pdb.set_trace()
     if hm_type == 'gaussian':
         pred, _ = get_max_preds(output)
         target, _ = get_max_preds(target)
