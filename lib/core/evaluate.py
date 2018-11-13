@@ -31,7 +31,7 @@ def calc_dists(preds, target, normalize):
 
 
 def dist_acc(dists, thr=0.00000000000000000001):
-    pdb.set_trace()
+    #pdb.set_trace()
     ''' Return percentage below threshold while ignoring values with a -1 '''
     dist_cal = np.not_equal(dists, -1)
     num_dist_cal = dist_cal.sum()
@@ -69,7 +69,7 @@ def accuracy(output, target, hm_type='gaussian', thr=0.5):
         if acc[i + 1] >= 0:
             avg_acc = avg_acc + acc[i + 1]
             cnt += 1
-
+    pdb.set_trace()
     avg_acc = avg_acc / cnt if cnt != 0 else 0
     if cnt != 0:
         acc[0] = avg_acc
