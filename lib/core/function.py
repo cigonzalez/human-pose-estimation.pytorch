@@ -136,6 +136,7 @@ def validate(config, val_loader, val_dataset, model, criterion, output_dir,
             num_images = input.size(0)
             # measure accuracy and record loss
             losses.update(loss.item(), num_images)
+            pdb.set_trace()
             _, avg_acc, cnt, pred = accuracy(output.cpu().numpy(),
                                              target.cpu().numpy())
 
