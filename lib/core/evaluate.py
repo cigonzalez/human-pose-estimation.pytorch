@@ -31,6 +31,7 @@ def calc_dists(preds, target, normalize):
 
 
 def dist_acc(dists, thr=0.00000000000000000001):
+    pdb.set_trace()
     ''' Return percentage below threshold while ignoring values with a -1 '''
     dist_cal = np.not_equal(dists, -1)
     num_dist_cal = dist_cal.sum()
