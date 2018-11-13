@@ -25,7 +25,7 @@ MODEL:
     HEATMAP_SIZE:
     - 72
     - 96
-    SIGMA: 3
+    SIGMA: 1
     FINAL_CONV_KERNEL: 1
     DECONV_WITH_BIAS: false
     NUM_DECONV_LAYERS: 3
