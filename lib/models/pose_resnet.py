@@ -14,6 +14,8 @@ import logging
 import torch
 import torch.nn as nn
 
+import pdb
+
 
 BN_MOMENTUM = 0.1
 logger = logging.getLogger(__name__)
@@ -198,6 +200,7 @@ class PoseResNet(nn.Module):
         x = self.layer2(x)
         x = self.layer3(x)
         x = self.layer4(x)
+        pdb.set_trace()
 
         x = self.deconv_layers(x)
         x = self.final_layer(x)
