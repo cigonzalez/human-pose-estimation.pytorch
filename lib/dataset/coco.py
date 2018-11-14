@@ -392,7 +392,7 @@ class COCODataset(JointsDataset):
         coco_dt = self.coco.loadRes(res_file)
         coco_eval = COCOeval(self.coco, coco_dt, 'keypoints')
         coco_eval.params.useSegm = None
-        pdb.set_trace()
+        #pdb.set_trace()
         coco_eval.evaluate()
         coco_eval.accumulate()
         coco_eval.summarize()
