@@ -59,7 +59,7 @@ TRAIN:
   NESTEROV: false
 TEST:
   BATCH_SIZE: 45
-  COCO_BBOX_FILE: 'data/rsna/hand-detection-results/bbox.json'
+  COCO_BBOX_FILE: 'data/rsna/hand_detection_results/bbox.json'
   BBOX_THRE: 1.0
   FLIP_TEST: false
   IMAGE_THRE: 0.0
