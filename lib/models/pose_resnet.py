@@ -191,7 +191,7 @@ class PoseResNet(nn.Module):
         return nn.Sequential(*layers)
 
     def forward(self, x):
-        pdb.set_trace()
+        #pdb.set_trace()
         x = self.conv1(x)
         x = self.bn1(x)
         x = self.relu(x)
