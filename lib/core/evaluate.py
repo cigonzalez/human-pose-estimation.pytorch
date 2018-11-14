@@ -15,7 +15,7 @@ from core.inference import get_max_preds
 
 
 def calc_dists(preds, target, normalize):
-    pdb.set_trace()
+    #pdb.set_trace()
     preds = preds.astype(np.float32)
     target = target.astype(np.float32)
     dists = np.zeros((preds.shape[1], preds.shape[0]))
@@ -51,7 +51,7 @@ def accuracy(output, target, hm_type='gaussian', thr=0.5):
     #pdb.set_trace()
     idx = list(range(output.shape[1]))
     norm = 1.0
-    pdb.set_trace()
+    #pdb.set_trace()
     if hm_type == 'gaussian':
         pred, _ = get_max_preds(output)
         target, _ = get_max_preds(target)
@@ -69,7 +69,7 @@ def accuracy(output, target, hm_type='gaussian', thr=0.5):
         if acc[i + 1] >= 0:
             avg_acc = avg_acc + acc[i + 1]
             cnt += 1
-    pdb.set_trace()
+    #pdb.set_trace()
     avg_acc = avg_acc / cnt if cnt != 0 else 0
     if cnt != 0:
         acc[0] = avg_acc
