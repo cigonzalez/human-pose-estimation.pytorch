@@ -89,6 +89,7 @@ def train(config, train_loader, model, criterion, optimizer, epoch,
 
 def validate(config, val_loader, val_dataset, model, criterion, output_dir,
              tb_log_dir, writer_dict=None):
+    pdb.set_trace()
     batch_time = AverageMeter()
     losses = AverageMeter()
     acc = AverageMeter()
