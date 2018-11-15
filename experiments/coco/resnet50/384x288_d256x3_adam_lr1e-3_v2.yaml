@@ -1,6 +1,6 @@
 GPUS: '0'
 DATA_DIR: ''
-OUTPUT_DIR: 'output_new_sigmas_gt'
+OUTPUT_DIR: 'output_new_sigmas_all'
 LOG_DIR: 'log'
 WORKERS: 4
 PRINT_FREQ: 100
