@@ -100,6 +100,7 @@ def reset_config(config, args):
 
 
 def main():
+    pdb.set_trace()
     args = parse_args()
     reset_config(config, args)
 
