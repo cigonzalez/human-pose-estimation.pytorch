@@ -31,7 +31,6 @@ from utils.utils import create_logger
 
 import dataset
 import models
-import pdb
 
 
 def parse_args():
@@ -101,7 +100,7 @@ def reset_config(config, args):
 
 
 def main():
-    pdb.set_trace()
+    #pdb.set_trace()
     args = parse_args()
     reset_config(config, args)
 

@@ -89,7 +89,7 @@ def train(config, train_loader, model, criterion, optimizer, epoch,
 
 def validate(config, val_loader, val_dataset, model, criterion, output_dir,
              tb_log_dir, writer_dict=None):
-    pdb.set_trace()
+    #pdb.set_trace()
     batch_time = AverageMeter()
     losses = AverageMeter()
     acc = AverageMeter()
@@ -181,7 +181,7 @@ def validate(config, val_loader, val_dataset, model, criterion, output_dir,
                 save_debug_images(config, input, meta, target, pred*4, output,
                                   prefix)
 
-        pdb.set_trace()
+        #pdb.set_trace()
         name_values, perf_indicator = val_dataset.evaluate(
             config, all_preds, output_dir, all_boxes, image_path,
             filenames, imgnums)
