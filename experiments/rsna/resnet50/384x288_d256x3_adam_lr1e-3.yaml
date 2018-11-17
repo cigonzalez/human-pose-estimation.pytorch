@@ -67,7 +67,7 @@ TEST:
   MODEL_FILE: 'output/coco/pose_resnet_50/384x288_d256x3_adam_lr1e-3/model_best_B.pth.tar'
   NMS_THRE: 1.0
   OKS_THRE: 1.0
-  USE_GT_BBOX: true
+  USE_GT_BBOX: false
 DEBUG:
   DEBUG: true
   SAVE_BATCH_IMAGES_GT: true
